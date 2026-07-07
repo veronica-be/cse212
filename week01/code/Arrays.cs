@@ -13,7 +13,15 @@ public static class Arrays
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
 
-        return []; // replace this return statement with your own
+        double[] numbers = new double[length];  // fixed array to save the data to give
+        double x;
+        for (int i = 0; i < length; i++) // loop for length times
+        {
+            x = (i + 1) * number; // makes calculation of the multiple of 
+            numbers[i] = x; // saves number to certain index
+        }
+
+        return numbers; // replace this return statement with your own
     }
 
     /// <summary>
@@ -29,5 +37,12 @@ public static class Arrays
         // Remember: Using comments in your program, write down your process for solving this problem
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
+
+        List<int> lastSlice = data.GetRange(0, data.Count - amount); // slice of the list to append at the last form index 0 to just before the number which it will begin
+        List<int> firstSlice = data.GetRange(data.Count - amount, amount); // slice from where it cuts the amount to the end 
+
+        data.Clear(); // empty the data list passed
+        data.AddRange(firstSlice);
+        data.AddRange(lastSlice);
     }
 }
