@@ -32,7 +32,17 @@ public class Maze
     /// </summary>
     public void MoveLeft()
     {
-        // FILL IN CODE
+        if (_mazeMap.ContainsKey((_currX, _currY)))
+        {
+            bool[] directions = _mazeMap[(_currX, _currY)];
+            if (directions[0]) // checking if its allowed to go left
+            {
+                _currX -= 1;
+                return;
+            }
+        }
+        // if its not allowed then we throw the exception.
+        throw new InvalidOperationException("Can't go that way!");
     }
 
     /// <summary>
@@ -41,7 +51,17 @@ public class Maze
     /// </summary>
     public void MoveRight()
     {
-        // FILL IN CODE
+        if (_mazeMap.ContainsKey((_currX, _currY)))
+        {
+            bool[] directions = _mazeMap[(_currX, _currY)];
+            if (directions[1]) // checking if its allowed to go right
+            {
+                _currX += 1;
+                return;
+            }
+        }
+        // if its not allowed then we throw the exception.
+        throw new InvalidOperationException("Can't go that way!");
     }
 
     /// <summary>
@@ -50,7 +70,17 @@ public class Maze
     /// </summary>
     public void MoveUp()
     {
-        // FILL IN CODE
+        if (_mazeMap.ContainsKey((_currX, _currY)))
+        {
+            bool[] directions = _mazeMap[(_currX, _currY)];
+            if (directions[2]) // checking if its allowed to go up
+            {
+                _currY -= 1;
+                return;
+            }
+        }
+        // if its not allowed then we throw the exception.
+        throw new InvalidOperationException("Can't go that way!");
     }
 
     /// <summary>
@@ -59,7 +89,17 @@ public class Maze
     /// </summary>
     public void MoveDown()
     {
-        // FILL IN CODE
+        if (_mazeMap.ContainsKey((_currX, _currY)))
+        {
+            bool[] directions = _mazeMap[(_currX, _currY)];
+            if (directions[3]) // checking if its allowed to go down
+            {
+                _currY += 1;
+                return;
+            }
+        }
+        // if its not allowed then we throw the exception.
+        throw new InvalidOperationException("Can't go that way!");
     }
 
     public string GetStatus()
