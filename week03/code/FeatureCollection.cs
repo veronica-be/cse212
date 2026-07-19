@@ -1,7 +1,5 @@
 public class FeatureCollection
 {
-    // TODO Problem 5 - ADD YOUR CODE HERE
-    // Create additional classes as necessary
     public string Type { get; set; }
     public Metadata Metadata { get; set; }
     public double[] Bbox { get; set; }
@@ -28,6 +26,7 @@ public class Feature
 
 public class Properties
 {
+    //just added the necessary
     public double Mag { get; set; }
     public string Place { get; set; }
 
