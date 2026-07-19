@@ -201,7 +201,7 @@ public static class SetsAndMaps
             string place = feature.Properties.Place;
             double mag = feature.Properties.Mag;
 
-            summaries.Add($"{place} - Mag {mag}");
+            summaries.Add($"{place} - Mag {mag},");
         }
 
 
