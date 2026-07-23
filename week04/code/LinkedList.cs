@@ -43,7 +43,6 @@ public class LinkedList : IEnumerable<int>
         }
 
         // if linked list has elements and making it similar to InsertHead
-        // No using C# class method
         else
         {
             newNode.Prev = _tail;
